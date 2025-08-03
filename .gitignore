@@ -3739,3 +3739,6 @@ quarto-1.7.32/share/use/binder/jupyter_notebook_config.py
 quarto-1.7.32/share/use/binder/vscode.svg
 quarto-1.7.32/share/version
 quarto-1.7.32/share/wasm/graphvizlib.wasm
+
+# Virtual environment
+.venv/
