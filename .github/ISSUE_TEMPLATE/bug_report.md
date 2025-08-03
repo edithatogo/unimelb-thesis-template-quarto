@@ -14,7 +14,7 @@ A clear and concise description of what the bug is.
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Change '....'
-3. Run '....'
+3. Run `quarto render --to <format>`
 4. See error '....'
 
 **Expected behavior**
@@ -23,12 +23,12 @@ A clear and concise description of what you expected to happen.
 **Screenshots (Optional)**
 If applicable, add screenshots to help explain your problem.
 
-**LaTeX Distribution & Version (please complete the following information):**
- - OS: [e.g. Windows 10, macOS Sonoma, Ubuntu 22.04]
- - TeX Distribution: [e.g. TeX Live 2023, MiKTeX 23.10]
- - Compiler: [e.g. lualatex, pdflatex]
- - `latexmk` version (if used):
+**Software Versions (please complete the following information):**
+ - OS: [e.g. Windows 11, macOS Sonoma, Ubuntu 24.04]
+ - Quarto Version: [e.g. 1.6.43]
+ - Typst Version: [e.g. 0.13.0]
+ - TeX Distribution (if rendering to PDF via LaTeX): [e.g. TeX Live 2024, MiKTeX 24.1]
 
 **Additional context (Optional)**
-Add any other context about the problem here. For example, are you using Overleaf or a local installation?
+Add any other context about the problem here.
 Are you using the latest version of the template from the `main` branch?

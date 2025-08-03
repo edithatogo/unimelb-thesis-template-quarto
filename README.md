@@ -1,154 +1,65 @@
-# University of Melbourne Thesis Template
+# Quarto Thesis Template
 
-This is a modernized version of the University of Melbourne PhD thesis template. It has been updated to use modern LaTeX packages and best practices, making it easier to use, customize, and maintain.
+This is a Quarto-based thesis template, adapted from a modernized University of Melbourne PhD thesis template. It is designed to be easy to use, customize, and maintain, with a focus on producing beautiful documents in various formats, including Typst, PDF, and HTML.
 
 ## Features
 
-*   **Modern Packages:** Utilizes `biblatex` for bibliography, `fontspec` for Unicode fonts, `geometry` for page layout, `hyperref` for PDF features, `microtype` for typography, and more.
-*   **Structured Example:** A comprehensive `example/` directory showcasing common thesis elements like figures, tables, equations, and code listings.
-*   **Automated Build:** Includes a `.latexmkrc` file for automated compilation with `lualatex` and `biber`.
-*   **Code Quality:** Pre-configured for `chktex` (linter) and `latexindent` (formatter).
-*   **Clear Customization:** Well-commented class file (`template/Thesis.cls`) and example files.
+- **Multi-format Output:** Generate your thesis in Typst, PDF (via LaTeX), and HTML from the same source.
+- **Modern Tooling:** Uses Quarto for a powerful and flexible authoring experience.
+- **Structured Template:** A clear and organized structure for your thesis content.
+- **Customizable:** Easily customize the appearance of your thesis using templates.
+- **Automated CI/CD:** Comes with a pre-configured GitHub Actions workflow to automatically build and test your thesis.
 
 ## Requirements
 
-*   A full LaTeX distribution, such as [TeX Live](https://www.tug.org/texlive/), [MiKTeX](https://miktex.org/), or [MacTeX](https://www.tug.org/mactex/).
-*   `biber`: For processing the bibliography (usually included with TeX distributions).
-*   `chktex` (optional): For linting LaTeX code.
-*   `latexindent` (optional): For formatting LaTeX code.
+- [Quarto CLI](https://quarto.org/docs/get-started/)
+- [Typst](https://typst.app/) (for rendering to Typst)
+- A LaTeX distribution (e.g., [TeX Live](https://www.tug.org/texlive/)) (for rendering to PDF via LaTeX)
 
 ## Usage
 
-### Local Compilation
+### Local Rendering
 
-1.  Navigate to the `example` directory: `cd example`
-2.  Run `latexmk`:
+1.  **Install Dependencies:** Make sure you have Quarto, Typst, and a LaTeX distribution installed.
+2.  **Render the Thesis:** To render the thesis in all supported formats, run the following command from the root of the repository:
     ```bash
-    latexmk Thesis.tex
+    quarto render
     ```
-    This will compile the document (`Thesis.tex`), run `biber` for the bibliography, and re-compile as needed, producing `Thesis.pdf` in the `example/out/` directory.
-3.  To clean up auxiliary files:
+    To render to a specific format, use the `--to` flag:
     ```bash
-    latexmk -c
+    # Render to Typst
+    quarto render --to typst
+
+    # Render to HTML
+    quarto render --to html
     ```
-    And to clean up all generated files (including PDF):
-    ```bash
-    latexmk -C
-    ```
+    The output files will be located in the `_output` directory.
 
-### Usage with Overleaf
+### Project Structure
 
-1.  **Upload:** Download this template as a ZIP file and upload it to your Overleaf project.
-2.  **Compiler:** In the Overleaf menu, set the "LaTeX engine" to `LuaLaTeX`.
-3.  **Main Document:** Ensure the main document is set to `example/Thesis.tex`. Overleaf usually detects this, but you can confirm in the project settings.
-4.  **Compile:** Click "Recompile".
-
-### Linting (Optional)
-
-To lint the LaTeX code (from the repository root):
-```bash
-chktex **/*.tex # Or specify individual files
-```
-
-### Formatting (Optional)
-
-To format the LaTeX code (from the repository root, this will modify files in place):
-```bash
-latexindent -w -s -y **/*.tex # Or specify individual files
-```
+- **`_quarto.yml`**: The main configuration file for the Quarto project. This is where you set the title, author, and other metadata, as well as the structure of the thesis.
+- **`index.qmd`**: The main entry point of the thesis.
+- **`chapters/`**: Contains the individual chapters of your thesis as `.qmd` files.
+- **`preamble/`**: Contains the front matter of the thesis, such as the abstract, declaration, and acknowledgements.
+- **`appendices/`**: Contains the appendices of your thesis.
+- **`bibliography.bib`**: Your bibliography file in BibTeX format.
+- **`figures/`**: A directory to store your figures.
+- **`templates/`**: Contains the templates for different output formats (e.g., `thesis.typ` for Typst).
 
 ## Customization
 
-The primary files you'll edit are within the `example/` directory:
-
-*   **`example/Thesis.tex`**: This is the main file for your thesis.
-    *   Set metadata like `\title`, `\authors`, `\degree`, `\university`, `\department`, `\school`, `\supervisor`, etc. here.
-    *   Include or exclude chapters and preamble sections.
-*   **`example/Chapters/`**: Contains the individual chapters of your thesis (e.g., `Chapter1.tex`). Add, remove, or rename files here and update their inclusion in `example/Thesis.tex`.
-*   **`example/Preamble/`**: Contains pre-main matter content like `Abstract.tex`, `Acknowledgements.tex`, `Declaration.tex`, and `Preface.tex`. Edit these to add your own content.
-*   **`example/Bibliography.bib`**: This is your bibliography file. Add your references here in BibTeX format.
-*   **`example/Figures/`**: Place your figure files (PDF, PNG, JPG, EPS) in this directory.
-
-Advanced customization can be done in `template/Thesis.cls`:
-
-*   **Fonts:**
-    *   The template uses `fontspec` and defaults to Latin Modern fonts.
-    *   To change fonts, uncomment and modify the relevant lines in `template/Thesis.cls` (search for `\usepackage{fontspec}`). For example:
-        ```latex
-        % \setmainfont{Times New Roman}
-        % \setsansfont{Arial}
-        % \setmonofont{Courier New}
-        ```
-    *   Ensure the fonts you choose are available on your system or on Overleaf.
-*   **Bibliography Style:**
-    *   The template uses `biblatex` with `style=numeric-comp`.
-    *   You can change the style in `template/Thesis.cls` by modifying the `\usepackage[backend=biber, style=...] {biblatex}` line. Common styles include `authoryear`, `apa`, `mla`, etc. Refer to the `biblatex` documentation for available styles and options.
-*   **`hyperref` Colors:**
-    *   Link colors are defined in `template/Thesis.cls` within the `\usepackage[...]{hyperref}` command. You can change `linkcolor`, `citecolor`, and `urlcolor` (e.g., to `black` for printing if desired).
-*   **Other Class Options:** The `Thesis.cls` file is commented to explain various sections and package choices. For deeper modifications, refer to the comments and the documentation of the respective LaTeX packages.
-
-## Troubleshooting
-
-*   **Compilation Errors:**
-    *   Check the LaTeX log file (`example/out/Thesis.log`) for detailed error messages.
-    *   Ensure all necessary packages are installed.
-    *   If using `latexmk`, it typically handles multiple runs. If compiling manually, you might need: `lualatex Thesis.tex` -> `biber Thesis` -> `lualatex Thesis.tex` -> `lualatex Thesis.tex`.
-*   **Fonts Not Found:** If you've changed fonts via `fontspec`, ensure they are correctly named and installed on your system (or supported by Overleaf).
-*   **Bibliography Issues:**
-    *   Ensure `biber` is run correctly (automated by `latexmk`).
-    *   Check `Bibliography.bib` for syntax errors in your BibTeX entries.
-    *   Ensure all cited keys exist in your `.bib` file.
-*   **EPS Figures:** If you have issues with EPS figures, ensure `epstopdf` is working or pre-convert them to PDF. The template comments out `\usepackage{epstopdf}` in `Thesis.cls` as `lualatex` often handles this, but it can be re-enabled if needed.
-
-## LaTeX Best Practices
-
-This template attempts to follow several LaTeX best practices:
-
-*   **Vector Graphics:** Use vector graphics (PDF, EPS) for diagrams, plots, and illustrations whenever possible to ensure they scale without loss of quality. Use raster graphics (PNG, JPG) for photographs.
-*   **`booktabs` for Tables:** Use the `booktabs` package for professional-looking tables (avoid vertical rules, use horizontal rules sparingly). See `example/Chapters/Chapter1.tex`.
-*   **`microtype` for Typography:** The `microtype` package is included to improve the visual appearance of text (e.g., character protrusion, font expansion).
-*   **`csquotes` for Quotations:** The `csquotes` package provides context-sensitive quotation marks and is recommended for use with `biblatex`.
-*   **Semantic Markup:** Use commands and environments for their semantic meaning (e.g., `\emph` for emphasis, specific theorem environments) rather than just for visual styling.
-*   **Separate Content and Presentation:** Keep your main content in `.tex` files within `Chapters/` and `Preamble/`. Styling is primarily handled by `template/Thesis.cls`.
+- **Metadata:** Edit `_quarto.yml` to change the thesis title, author, and other metadata. The `thesis` key contains custom metadata that is used in the templates.
+- **Content:** Add, remove, or edit the `.qmd` files in the `chapters/`, `preamble/`, and `appendices/` directories to write your thesis.
+- **Styling:**
+    - **Typst:** To customize the Typst output, edit the `templates/thesis.typ` file.
+    - **HTML:** To customize the HTML output, you can add a `theme` to the `html` section of `_quarto.yml`. See the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html) for more information.
+    - **PDF (via LaTeX):** To customize the PDF output, you can create a custom LaTeX template and reference it in the `pdf` section of `_quarto.yml`.
 
 ## Contributing
 
-Contributions to improve this template are welcome! Please feel free to submit a pull request or open an issue with suggestions or bug reports.
-(This is a placeholder, you can expand this section if you wish).
+Contributions to improve this template are welcome! Please see the `CONTRIBUTING.md` file for more information.
 
 ## License
 
-This template itself is provided under a permissive license like MIT or CC0 (you should choose one and add a `LICENSE` file).
+This template is available under the MIT License. See the `LICENSE` file for more details.
 The University of Melbourne logo is subject to the University's branding guidelines and copyright.
-Any documents produced using this template are the property and responsibility of the author.
-
-**Placeholder for License Choice:**
-You should choose a license (e.g., MIT License) and add a `LICENSE.md` file to the repository root.
-Example text for MIT License:
-```
-MIT License
-
-Copyright (c) [Year] [Your Name/Group]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-Remember to replace `[Year]` and `[Your Name/Group]`.
----
-
-This README provides a starting point. Feel free to expand or modify it further.

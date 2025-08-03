@@ -19,3 +19,4 @@ A clear and concise description of any alternative solutions or features you've 
 **Additional context (Optional)**
 Add any other context or screenshots about the feature request here.
 Why would this be useful for a thesis template?
+What output formats should this feature target (HTML, Typst, PDF, etc.)?
