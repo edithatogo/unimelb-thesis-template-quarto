@@ -1,0 +1,3 @@
+# Symbols
+
+$\alpha$: The first letter of the Greek alphabet.

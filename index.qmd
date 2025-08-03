@@ -1,6 +1,6 @@
 ---
-title: "Thesis Title"
-author: "Your Name"
+title: "A Quarto PhD Thesis"
+author: "James D. Harding"
 date: "today"
 ---
 
