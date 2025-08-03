@@ -1,0 +1,7 @@
+# Symbols
+
+| Symbol   | Name              | Unit            |
+| :------- | :---------------- | :-------------- |
+| $a$      | distance          | m               |
+| $P$      | power             | W (Js$^{-1}$)   |
+| $\omega$ | angular frequency | rads$^{-1}$     |
