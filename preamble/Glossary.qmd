@@ -1,0 +1,7 @@
+# Glossary
+
+LaTeX
+: A document preparation system
+
+SVM
+: Support Vector Machine

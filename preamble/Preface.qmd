@@ -1,0 +1,15 @@
+# Preface
+
+Where applicable, the following information must be included in a preface:
+* a description of work towards the thesis that was carried out in collaboration with others, indicating the nature and proportion of the contribution of others and in general terms the portions of the work which the student claims as original;
+* a description of work towards the thesis that has been submitted for other qualifications;
+* a description of work towards the thesis that was carried out prior to enrolment in the degree;
+* whether any third party editorial assistance was provided in preparation of the thesis and whether the persons providing this assistance are knowledgeable in the academic discipline of the thesis;
+* the contributions of all persons involved in any multi-authored publications or articles in preparation included in the thesis;
+* the publication status of all chapters presented in article format using the descriptors below;
+    * Unpublished material not submitted for publication
+    * Submitted for publication to [publication name] on [date]
+    * In revision following peer review by [publication name]
+    * Accepted for publication by [publication name] on [date]
+    * Published by [publication name] on [date]
+* an acknowledgement of all sources of funding, including grant identification numbers where applicable and Australian Government Research Training Program Scholarships, including fee offset scholarships.

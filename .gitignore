@@ -32,3 +32,6 @@ example/out/
 # Other
 .DS_Store
 session_log.txt
+
+# Quarto installer
+quarto-*.deb
