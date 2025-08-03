@@ -1,0 +1,40 @@
+name: Render Quarto Project
+
+on:
+  push:
+    branches: [ main, feature/quarto-migration ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          # The version of Quarto to use.
+          # See https://github.com/quarto-dev/quarto-cli/releases for a list of available versions.
+          version: "1.6.43" # The version I tried to install earlier
+
+      - name: Install Typst
+        uses: typst/setup-action@v1
+        with:
+          # The version of Typst to use.
+          version: "0.13.0" # A recent version
+
+      - name: Render project
+        run: |
+          quarto render
+        # By default, `quarto render` renders all formats defined in _quarto.yml
+        # In my case, this will be html and typst. I will add pdf later.
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-thesis
+          path: _output/
+          if-no-files-found: error

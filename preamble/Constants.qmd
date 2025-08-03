@@ -1,0 +1,5 @@
+# Constants
+
+| Constant Name  | Symbol | Value                                            |
+| :------------- | :----: | :----------------------------------------------- |
+| Speed of Light | $c$    | $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact) |
