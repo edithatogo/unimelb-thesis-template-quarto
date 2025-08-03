@@ -13,7 +13,25 @@ book:
     - chapters/Chapter1.qmd
     - appendices/AppendixA.qmd
   appendices:
-    - appendices/AppendixA.qmd
+    - appendices/AppendixA.qmd # This is how Quarto handles appendices for numbering
+
+# Bibliography
+bibliography: bibliography.bib
+thesis:
+  type: "PhD Thesis"
+  degree: "Doctor of Philosophy"
+  university: "The University of Melbourne"
+  university-url: "https://www.unimelb.edu.au"
+  department: "Department of Modernisation"
+  department-url: "https://www.unimelb.edu.au/modernisation"
+  school: "School of Advanced Templates"
+  school-url: "https://www.unimelb.edu.au/templates"
+  group: "Gemini CLI Research Group"
+  group-url: "https://www.gemini.com/research"
+  supervisor: "Gemini CLI"
+  examiner: "The User"
+  subject: "LaTeX Template Modernisation"
+  keywords: "LaTeX, Template, Modernisation, Gemini CLI"
 
 format:
   typst:
