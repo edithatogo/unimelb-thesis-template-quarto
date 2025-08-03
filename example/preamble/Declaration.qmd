@@ -1,0 +1,17 @@
+# Declaration of Authorship
+
+I, {{< meta book.author >}}, declare that this thesis titled, "{{< meta book.title >}}" and the work presented in it are my own. I confirm that:
+
+* The thesis comprises only my original work towards the {{< meta thesis.degree >}} except where indicated in the preface;
+
+* due acknowledgement has been made in the text to all other material used; and
+
+* the thesis is fewer than the maximum word limit in length, exclusive of tables, maps, bibliographies and appendices as approved by the Research Higher Degrees Committee.
+
+Signed:
+
+---
+
+Date:
+
+{{< meta book.date >}}

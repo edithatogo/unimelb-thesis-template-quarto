@@ -21,7 +21,7 @@ jobs:
           version: "1.6.43" # The version I tried to install earlier
 
       - name: Install Typst
-        uses: typst/setup-action@v1
+        uses: typst/setup-action@main
         with:
           # The version of Typst to use.
           version: "0.13.0" # A recent version

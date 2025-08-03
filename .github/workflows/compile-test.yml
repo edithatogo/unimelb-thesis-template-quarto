@@ -13,6 +13,9 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4
 
+      - name: Install latexmk
+        run: sudo apt-get install -y latexmk
+
       - name: Set up TeX Live
         uses: xu-cheng/texlive-action@v2
         with:

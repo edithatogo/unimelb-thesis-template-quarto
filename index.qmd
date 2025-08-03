@@ -1,7 +1,9 @@
 ---
-title: "A Modernised Thesis Template"
+title: "Thesis Title"
+author: "Your Name"
+date: "today"
 ---
 
-This is the main index file for the Quarto thesis template. The content of the thesis is organized into chapters and appendices, which are defined in `_quarto.yml`.
+# Preface
 
-See the `README.md` for instructions on how to use this template.
+This is the preface.
