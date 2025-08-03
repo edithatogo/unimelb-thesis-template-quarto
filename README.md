@@ -39,7 +39,6 @@ This project uses a Python virtual environment to manage dependencies. To get st
     ```bash
     pip install -r requirements.txt
     ```
-    *Note: The `requirements.txt` file is currently empty but is reserved for future Python dependencies.*
 
 Once the virtual environment is activated, you can run the `quarto` commands as described in the "Usage" section.
 

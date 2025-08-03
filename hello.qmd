@@ -1,8 +1,0 @@
----
-title: "Hello, World!"
-format: pdf
----
-
-## Hello, World!
-
-This is a test.

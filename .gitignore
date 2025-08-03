@@ -36,9 +36,16 @@ session_log.txt
 # Quarto installer
 quarto-*.deb
 
+# Quarto executable and libraries
+quarto-*/
+
 # Quarto output and cache
 /_output/
 /_freeze/
+
+# Temporary files
+*.tex
+hello.qmd
 
 quarto-1.7.32-linux-amd64.tar.gz
 quarto-1.7.32/bin/quarto

@@ -12,7 +12,6 @@ book:
     - preamble/Abstract.qmd
     - preamble/Acknowledgements.qmd
     - chapters/Chapter1.qmd
-    - appendices/AppendixA.qmd
 
   appendices:
     - appendices/AppendixA.qmd
@@ -26,7 +25,8 @@ college: School for Infrastructure and Environment
 degree: Doctor of Philosophy
 year: 2023
 supervisors: |
-  Dr Dre.
+  Prof. A. Supervisor
+  Dr. B. Co-supervisor
 wordcount: |
   tbc
 keywords: [template, demo]

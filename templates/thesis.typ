@@ -1,4 +1,4 @@
-#let thesis(
+#let project(
   title: "The Title",
   author: "The Author",
   date: "",
@@ -13,7 +13,18 @@
 ) = {
   // Set the document's basic properties.
   set document(author: author, title: title)
-  set text(font: "Linux Libertine", lang: "en")
+  set page(
+    paper: "a4",
+    margin: (left: 3.5cm, right: 2.5cm, top: 2.5cm, bottom: 2.5cm),
+    header: locate(loc => {
+      // Don't display header on title page.
+      if counter(page).at(loc).first() > 1 {
+        align(right, text(10pt, str(counter(page).get().at(loc).first())))
+      }
+    })
+  )
+  set text(font: "Linux Libertine", lang: "en", size: 11pt)
+  set par(justify: true, leading: 0.65em, first-line-indent: 1em)
 
   // Title page.
   show-title-page(
