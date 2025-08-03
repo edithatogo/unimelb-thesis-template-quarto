@@ -30,6 +30,19 @@
   set par(leading: 0.65em, justify: true)
   set block(spacing: 1.5em)
 
+  // Style headings
+  show heading.where(level: 1): it => {
+    // Center the heading
+    align(center)[
+      // Add some space before the heading
+      v(2em)
+      // Make the heading bold and larger
+      text(weight: "bold", size: 1.5em, it.body)
+      // Add some space after the heading
+      v(1em)
+    ]
+  }
+
   // 2. Show the title page
   show-title-page(
     title: title,
@@ -42,6 +55,11 @@
   body
 }
 
+#show heading(level: 1): it => {
+  set text(size: 2em)
+  it
+}
+
 // A function to generate the title page
 #let show-title-page(title:, author:, date:, thesis:) = {
   // Prevent page numbering on the title page
@@ -49,8 +67,10 @@
 
   // Center the content vertically and horizontally
   align(center + horizon, {
-    // University logo (placeholder)
-    // image("figures/unimelb_logo.svg", width: 30%)
+    // University logo
+    if thesis.logo != none {
+      image(thesis.logo, width: 30%)
+    }
 
     // Vertical spacing
     v(2fr)
