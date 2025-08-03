@@ -1,80 +1,76 @@
-# Roadmap
+# Development Roadmap: Quarto PhD Thesis Template for the University of Melbourne
 
-This document outlines the development roadmap for the Quarto Thesis Template. It is intended to provide a high-level overview of the project's future direction and a more detailed list of tasks to be completed.
+This document outlines the development roadmap for a Quarto-based PhD thesis template for the University of Melbourne. The template will support both traditional LaTeX-based PDF output and a modern alternative using Typst.
 
-## Phases
+## Phase 1: Core Infrastructure Setup (ETA: 1 week)
 
-The development of this template is divided into the following phases:
+The goal of this phase is to set up the basic infrastructure for the project, including the Quarto project, version control, and a virtual environment.
 
-### Phase 1: Core Functionality & Format Parity
+- **Dependencies:**
+  - Quarto CLI
+  - Typst
+  - TeX Live (or another LaTeX distribution)
+- **Tasks:**
+  - [ ] Initialize a new Quarto book project.
+  - [ ] Set up a Git repository for version control.
+  - [ ] Create a virtual environment (e.g., using `venv` or `conda`) to manage dependencies.
+  - [ ] Document the setup process in the `README.md` file.
+- **Deliverables:**
+  - A basic Quarto project structure.
+  - A `README.md` file with setup instructions.
+  - A `.gitignore` file to exclude unnecessary files from version control.
 
-The goal of this phase is to ensure that the template is fully functional and provides a consistent, high-quality output across all target formats (Typst, PDF, and HTML).
+## Phase 2: LaTeX-based PDF Output (ETA: 3 weeks)
 
-- [x] Basic project structure setup.
-- [ ] Ensure consistent styling for all preamble sections (Abstract, Declaration, etc.) across all formats.
-- [ ] Ensure consistent styling for chapters, sections, figures, and tables across all formats.
-- [ ] Basic bibliography styling for all formats.
+This phase focuses on creating a high-quality PDF output using LaTeX that complies with the University of Melbourne's thesis formatting requirements.
 
-### Phase 2: Feature Enhancements
+- **Dependencies:**
+  - A University of Melbourne LaTeX thesis class or style file.
+- **Tasks:**
+  - [ ] Obtain or create a LaTeX template that meets the university's specifications.
+  - [ ] Integrate the LaTeX template with the Quarto project.
+  - [ ] Implement the following document components:
+    - [ ] Title page
+    - [ ] Abstract
+    - [ ] Table of Contents
+    - [ ] List of Figures
+    - [ ] List of Tables
+    - [ ] Bibliography (using BibTeX or CSL)
+  - [ ] Style chapters, sections, and other document elements according to the university's guidelines.
+  - [ ] Ensure that code chunks and their output are correctly rendered.
+  - [ ] Implement support for cross-referencing figures, tables, and sections.
+- **Deliverables:**
+  - A Quarto template that generates a compliant PDF using LaTeX.
+  - A working example that demonstrates all the features of the template.
 
-This phase will focus on adding features commonly found in theses.
+## Phase 3: Typst-based PDF Output (ETA: 2 weeks)
 
-- [ ] Support for glossaries.
-- [ ] Support for lists of abbreviations/symbols.
-- [ ] Advanced bibliography customization.
-- [ ] Support for different citation styles.
+This phase focuses on creating an alternative PDF output using Typst, leveraging its modern typesetting capabilities.
 
-### Phase 3: Ease of Use & Customization
+- **Tasks:**
+  - [ ] Create a Typst template that mimics the style of the LaTeX template.
+  - [ ] Implement the same document components as in the LaTeX template:
+    - [ ] Title page
+    - [ ] Abstract
+    - [ ] Table of Contents
+    - [ ] List of Figures
+    - [ ] List of Tables
+    - [ ] Bibliography
+  - [ ] Ensure that the Typst output is visually consistent with the LaTeX output.
+- **Deliverables:**
+  - A Quarto template that generates a high-quality PDF using Typst.
+  - An updated example that demonstrates the Typst output.
 
-The goal of this phase is to improve the user experience by making the template easier to customize.
+## Phase 4: Documentation and Release (ETA: 1 week)
 
-- [ ] Add more configuration options to `_quarto.yml` to control the appearance of the output.
-- [ ] Create a set of color themes for the HTML output.
-- [ ] Improve the documentation on how to customize the template.
+The final phase focuses on creating comprehensive documentation and preparing the template for release.
 
-### Phase 4: Documentation & Examples
-
-This phase will focus on improving the documentation and providing more comprehensive examples.
-
-- [ ] Write a comprehensive user guide.
-- [ ] Create more examples to showcase the template's features.
-- [ ] Add a gallery of theses created with the template.
-
-## To-Do List
-
-This is a more granular list of tasks that need to be completed.
-
-### General
-
-- [ ] Finalize the overall structure of the thesis template.
-- [ ] Review and update the documentation in `README.md`.
-
-### Typst Template (`templates/thesis.typ`)
-
-- [ ] Implement a title page that matches the University of Melbourne style.
-- [ ] Ensure all preamble sections (Abstract, Declaration, etc.) are correctly formatted.
-- [ ] Style chapters and sections.
-- [ ] Format figures and tables.
-- [ ] Implement bibliography styling.
-- [ ] Add support for glossaries and abbreviations.
-
-### LaTeX/PDF Template
-
-- [ ] Create a LaTeX template for PDF output.
-- [ ] Ensure parity with the Typst template in terms of features and styling.
-
-### HTML Template
-
-- [ ] Ensure the HTML output is clean and readable.
-- [ ] Add a nice theme.
-- [ ] Ensure all sections are correctly rendered.
-
-### Example Project (`example/`)
-
-- [ ] Flesh out the example to demonstrate all features of the template.
-- [ ] Add more example content.
-
-### CI/CD (`.github/workflows/`)
-
-- [ ] Improve the CI/CD pipeline to build and test all output formats.
-- [ ] Consider adding a step to deploy the example to GitHub Pages.
+- **Tasks:**
+  - [ ] Write a detailed user guide that explains how to use the template.
+  - [ ] Create a comprehensive example that showcases all the features of the template.
+  - [ ] Add instructions on how to customize the template.
+  - [ ] Tag a version 1.0 release.
+- **Deliverables:**
+  - A complete and well-documented Quarto thesis template.
+  - A comprehensive example project.
+  - A `CHANGELOG.md` file to track changes between versions.
