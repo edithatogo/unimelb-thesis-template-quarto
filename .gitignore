@@ -1,0 +1,34 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+
+# PDF output file
+# *.pdf # It can be useful to track the PDF in the example, but often not in the main repo.
+# For this template, let's keep the example PDF out of git.
+example/*.pdf
+
+# Editor backup files
+*~
+*.bak
+*.bak0
+
+# Specific error/backup files observed
+*.bcf-SAVE-ERROR
+
+# Output directory from .latexmkrc
+example/out/
+
+# Other
+.DS_Store
+session_log.txt

@@ -1,0 +1,35 @@
+name: LaTeX Compilation Test
+
+on:
+  push:
+    branches: [ main, feature/modernize-template ] # Or whichever branches you want to test
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  compile_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Set up TeX Live
+        uses: xu-cheng/texlive-action@v2
+        with:
+          packages: scheme-full biber latexmk
+
+      - name: Compile LaTeX document
+        run: |
+          cd example
+          latexmk -lualatex -interaction=nonstopmode -file-line-error Thesis.tex
+        # The -lualatex flag ensures lualatex is used, matching .latexmkrc
+        # -interaction=nonstopmode prevents the build from hanging on errors
+        # -file-line-error provides better error reporting
+
+      # Optional: Upload PDF artifact (uncomment if you want to inspect the PDF)
+      # - name: Upload PDF
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: thesis-pdf
+      #     path: example/out/Thesis.pdf # Assuming output is in example/out/
+      #     if-no-files-found: error # Fails the step if PDF is not found
