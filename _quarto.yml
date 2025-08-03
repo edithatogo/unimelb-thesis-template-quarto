@@ -1,52 +1,21 @@
-# See https://quarto.org/docs/projects/books.html for more information.
 project:
   type: book
-  output-dir: _output
+  output-dir: _book
 
 book:
-  title: "A Modernised Thesis Template"
-  author: "Doughnut"
+  title: "Thesis Title"
+  author: "Your Name"
   date: "today"
   chapters:
     - index.qmd
     - preamble/Abstract.qmd
-    - preamble/Declaration.qmd
-    - preamble/Preface.qmd
     - preamble/Acknowledgements.qmd
-    - preamble/Glossary.qmd
-    - preamble/Abbreviations.qmd
-    - preamble/Constants.qmd
-    - preamble/Symbols.qmd
     - chapters/Chapter1.qmd
+    - appendices/AppendixA.qmd
   appendices:
-    - appendices/AppendixA.qmd # This is how Quarto handles appendices for numbering
-
-# Bibliography
-bibliography: bibliography.bib
-
-# Thesis-specific metadata, can be accessed in templates
-thesis:
-  type: "PhD Thesis"
-  degree: "Doctor of Philosophy"
-  university: "The University of Melbourne"
-  university-url: "https://www.unimelb.edu.au"
-  department: "Department of Modernisation"
-  department-url: "https://www.unimelb.edu.au/modernisation"
-  school: "School of Advanced Templates"
-  school-url: "https://www.unimelb.edu.au/templates"
-  group: "Gemini CLI Research Group"
-  group-url: "https://www.gemini.com/research"
-  supervisor: "Gemini CLI"
-  examiner: "The User"
-  subject: "LaTeX Template Modernisation"
-  keywords: "LaTeX, Template, Modernisation, Gemini CLI"
+    - appendices/AppendixA.qmd
 
 format:
-  html:
-    theme: cosmo
   typst:
     template: templates/thesis.typ
     toc: true
-    lof: true
-    lot: true
-  # pdf: default # via latex
