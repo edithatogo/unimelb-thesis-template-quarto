@@ -38,6 +38,7 @@ thesis:
   examiner: "The User"
   subject: "LaTeX Template Modernisation"
   keywords: "LaTeX, Template, Modernisation, Gemini CLI"
+  logo: "Figures/unimelb_logo/logo-icon.svg"
 
 format:
   html:

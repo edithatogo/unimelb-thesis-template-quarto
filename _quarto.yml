@@ -20,9 +20,9 @@ book:
     - chapters/Chapter1.qmd
   appendices:
     - appendices/AppendixA.qmd # This is how Quarto handles appendices for numbering
-  bibliography: bibliography.bib
 
-# Thesis-specific metadata, can be accessed in templates
+# Bibliography
+bibliography: bibliography.bib
 thesis:
   type: "PhD Thesis"
   degree: "Doctor of Philosophy"
