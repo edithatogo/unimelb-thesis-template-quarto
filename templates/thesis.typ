@@ -55,6 +55,11 @@
   body
 }
 
+#show heading(level: 1): it => {
+  set text(size: 2em)
+  it
+}
+
 // A function to generate the title page
 #let show-title-page(title:, author:, date:, thesis:) = {
   // Prevent page numbering on the title page

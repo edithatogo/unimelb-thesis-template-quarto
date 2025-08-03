@@ -1,23 +1,17 @@
-# See https://quarto.org/docs/projects/books.html for more information.
 project:
   type: book
-  output-dir: _output
+  output-dir: _book
 
 book:
-  title: "A Modernised Thesis Template"
-  author: "Doughnut"
+  title: "Thesis Title"
+  author: "Your Name"
   date: "today"
   chapters:
     - index.qmd
     - preamble/Abstract.qmd
-    - preamble/Declaration.qmd
-    - preamble/Preface.qmd
     - preamble/Acknowledgements.qmd
-    - preamble/Glossary.qmd
-    - preamble/Abbreviations.qmd
-    - preamble/Constants.qmd
-    - preamble/Symbols.qmd
     - chapters/Chapter1.qmd
+    - appendices/AppendixA.qmd
   appendices:
     - appendices/AppendixA.qmd # This is how Quarto handles appendices for numbering
 
@@ -40,11 +34,6 @@ thesis:
   keywords: "LaTeX, Template, Modernisation, Gemini CLI"
 
 format:
-  html:
-    theme: cosmo
   typst:
     template: templates/thesis.typ
     toc: true
-    lof: true
-    lot: true
-  # pdf: default # via latex

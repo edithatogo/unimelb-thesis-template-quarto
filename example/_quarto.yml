@@ -1,7 +1,5 @@
-# See https://quarto.org/docs/projects/books.html for more information.
 project:
   type: book
-  output-dir: _output
 
 book:
   title: "A Modernised Thesis Template"
@@ -19,8 +17,9 @@ book:
     - preamble/Symbols.qmd
     - chapters/Chapter1.qmd
   appendices:
-    - appendices/AppendixA.qmd # This is how Quarto handles appendices for numbering
-  bibliography: bibliography.bib
+    - appendices/AppendixA.qmd
+
+bibliography: bibliography.bib
 
 # Thesis-specific metadata, can be accessed in templates
 thesis:
@@ -40,12 +39,14 @@ thesis:
   keywords: "LaTeX, Template, Modernisation, Gemini CLI"
   logo: "Figures/unimelb_logo/logo-icon.svg"
 
+
 format:
   html:
     theme: cosmo
+  pdf:
+    template: ../templates/unimelb.tex
   typst:
-    template: templates/thesis.typ
+    template: ../templates/thesis.typ
     toc: true
     lof: true
     lot: true
-  # pdf: default # via latex
