@@ -16,6 +16,33 @@ This is a Quarto-based thesis template, adapted from a modernized University of 
 - [Typst](https://typst.app/) (for rendering to Typst)
 - A LaTeX distribution (e.g., [TeX Live](https://www.tug.org/texlive/)) (for rendering to PDF via LaTeX)
 
+## Setup
+
+This project uses a Python virtual environment to manage dependencies. To get started, follow these steps:
+
+1.  **Create the virtual environment:**
+    ```bash
+    python3 -m venv .venv
+    ```
+
+2.  **Activate the virtual environment:**
+    -   On macOS and Linux:
+        ```bash
+        source .venv/bin/activate
+        ```
+    -   On Windows:
+        ```bash
+        .venv\Scripts\activate
+        ```
+
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    *Note: A `requirements.txt` file will be added in a future commit.*
+
+Once the virtual environment is activated, you can run the `quarto` commands as described in the "Usage" section.
+
 ## Usage
 
 ### Local Rendering
